@@ -1,17 +1,17 @@
-/* 
+/*
 Template Name: Aphrodite
-Author: Ingrid Kuhn 
-Author URI: themeforest/user/ingridk 
-Version: 1.1 
-Last change: 1 June 2023 
+Author: Ingrid Kuhn
+Author URI: themeforest/user/ingridk
+Version: 1.1
+Last change: 1 June 2023
 
-Table of Contents 
-#General and Typography 
-#Slideshow 
-#Structure 
+Table of Contents
+#General and Typography
+#Slideshow
+#Structure
 #Blog Pages
-#Miscellaneous 
-#Media Queries 
+#Miscellaneous
+#Media Queries
 
 /*=========================== General and Typography ============================ */
  body {
@@ -601,6 +601,14 @@ Table of Contents
      background-size:cover;
      background-image: url('../img/services/service6.jpg');
 }
+.card-service.bg-7 {
+    background-size:cover;
+    background-image: url('../img/services/service7.jpg');
+}
+.card-service.bg-8 {
+    background-size:cover;
+    background-image: url('../img/services/service8.jpg');
+}
  #bg-about1 {
      background-size:cover;
      background-position: center;
@@ -1142,7 +1150,7 @@ Table of Contents
 }
 /* Image border */
  .img-border {
-     border: 4px double 
+     border: 4px double
 }
 /* pills /badges */
  .nav-pills .nav-link {
@@ -1265,7 +1273,7 @@ Table of Contents
 /*=========================== Media queries ============================ */
 /* Small devices (landscape phones, 544px) */
  @media (max-width: 544px) {
-	 
+
      .spinner {
          left: 40%;
     }
@@ -1374,7 +1382,7 @@ Table of Contents
 }
 /* Medium- Large devices (desktops, 991px) */
  @media (max-width: 991px) {
-	
+
      .contact-icon {
          margin-top: 50px;
     }
@@ -1554,4 +1562,3 @@ Table of Contents
          width:1000px;
     }
 }
- 
