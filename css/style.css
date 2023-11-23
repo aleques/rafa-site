@@ -1085,6 +1085,11 @@ Table of Contents
      border-radius: 0;
      letter-spacing: 0.05rem;
 }
+
+.card-service-mod {
+    height: 350px !important;
+}
+
  .card-service a{
      height: 270px;
      width:100%;
@@ -1327,6 +1332,9 @@ Table of Contents
      .menu-item-price p{
          font-size:16px;
     }
+     .card-service-mod {
+         height: 270px !important;
+     }
      .card-service .txt {
          margin-left: 1.5rem;
     }
