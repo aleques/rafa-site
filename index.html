@@ -494,8 +494,8 @@
                            <div class="card-body">
                               <h3>Prendre rendez-vous</h3>
                               <!-- p class="card-text mt-4">Fusce at nibh lacinia orci dictum euismod. Praesent vel nisl in quam commodo tristique.</p-->
-                              <a href="https://widget.treatwell.be/fr/salon/100037557/menu" class="btn btn-primary">En ligne</a>
-                              <a href="https://api.whatsapp.com/send/?phone=32466459225&text&type=phone_number&app_absent=0" class="btn btn-primary">WhatsApp</a>
+                              <a id="btnRdvEnLigne" href="#" class="btn btn-primary">En ligne</a>
+                              <a id="btnRdvWhatsapp" href="#" class="btn btn-primary">WhatsApp</a>
                            </div>
                            <!--/card-body-->
                         </div>
@@ -617,7 +617,7 @@
             s.parentNode.insertBefore(t,s)}(window, document,'script',
                  'https://connect.facebook.net/en_US/fbevents.js');
          fbq('init', '1043413356547228');
-         fbq('track', 'PageView');
+         fbq('track', 'PageView', { content_name: 'home' });
       </script>
       <noscript>
          <img height="1" width="1" style="display:none"
@@ -625,13 +625,26 @@
       </noscript>
       <!-- End Facebook Pixel Code -->
 
-      <!-- META PIXEL SHOP MENU BUTTON -->
+      <!-- Facebook Pixel Button Functions -->
       <script type="text/javascript">
          $('#btnShop').click(function() {
-            fbq('track', 'Nails21Shop');
+            fbq('track', 'ViewContent', { content_name: 'nails_21_shop' });
             window.location.href = "https://shop.atelierrafaelaferreira.be";
          });
       </script>
+      <script type="text/javascript">
+         $('#btnRdvEnLigne').click(function() {
+            fbq('track', 'InitiateCheckout');
+            window.location.href = "https://widget.treatwell.be/fr/salon/100037557/menu";
+         });
+      </script>
+      <script type="text/javascript">
+         $('#btnRdvWhatsapp').click(function() {
+            fbq('track', 'Contact');
+            window.location.href = "https://api.whatsapp.com/send/?phone=32466459225&text&type=phone_number&app_absent=0";
+         });
+      </script>
+      <!-- End Facebook Pixel Button Functions -->
 
    </body>
 </html>

@@ -79,7 +79,7 @@
                               </a>
                            </li>
                            <li class="nav-item">
-                              <a class="nav-link" href="https://shop.atelierrafaelaferreira.be">
+                              <a id="btnShop" class="nav-link" href="#">
                                  Boutique en ligne
                               </a>
                            </li>
@@ -269,13 +269,22 @@
             s.parentNode.insertBefore(t,s)}(window, document,'script',
                  'https://connect.facebook.net/en_US/fbevents.js');
          fbq('init', '1043413356547228');
-         fbq('track', 'PageView');
+         fbq('track', 'PageView', { content_name: 'about' });
       </script>
       <noscript>
          <img height="1" width="1" style="display:none"
               src="https://www.facebook.com/tr?id=1043413356547228&ev=PageView&noscript=1"/>
       </noscript>
       <!-- End Facebook Pixel Code -->
+
+      <!-- Facebook Pixel Button Functions -->
+      <script type="text/javascript">
+         $('#btnShop').click(function() {
+            fbq('track', 'ViewContent', { content_name: 'nails_21_shop' });
+            window.location.href = "https://shop.atelierrafaelaferreira.be";
+         });
+      </script>
+      <!-- End Facebook Pixel Button Functions -->
 
    </body>
 </html>
