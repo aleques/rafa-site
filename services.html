@@ -189,12 +189,13 @@
                         <!-- card -->
                         <div class="col-lg-4 card-service-collumn">
                            <div class="card-service bg-1 border-bottom">
+                              <a id="btnUnhas" href="#">
                               <!-- a href="service-single.html"-->
                                  <div class="txt">
                                     <h5>Ongles</h5>
                                  </div>
                                  <!-- link -->
-                                 <!--p class="more-link">plus</p-->
+                                 <p class="more-link">plus</p>
                               </a>
                            </div>
                         </div>
@@ -202,12 +203,13 @@
                         <!-- card -->
                         <div class="col-lg-4 card-service-collumn">
                            <div class="card-service bg-2 border-bottom">
+                              <a id="btnPedicure" href="#">
                               <!-- a href="service-single.html"-->
                                  <div class="txt">
-                                    <h5>Pédicure </h5>
+                                    <h5>Pédicure</h5>
                                  </div>
                                  <!-- link -->
-                                 <!--p class="more-link">plus</p-->
+                                 <p class="more-link">plus</p>
                               </a>
                            </div>
                         </div>
@@ -215,12 +217,13 @@
                         <!-- card -->
                         <div class="col-lg-4 card-service-collumn">
                            <div class="card-service bg-3 border-bottom">
+                              <a id="btnManicure" href="#">
                               <!-- a href="service-single.html"-->
                                  <div class="txt">
                                     <h5>Manucure</h5>
                                  </div>
                                  <!-- link -->
-                                 <!--p class="more-link">plus</p-->
+                                 <p class="more-link">plus</p>
                               </a>
                            </div>
                         </div>
@@ -228,12 +231,13 @@
                         <!-- card -->
                         <div class="col-lg-4 card-service-collumn">
                            <div class="card-service bg-4 border-bottom">
+                              <a id="btnCilios" href="#">
                               <!-- a href="service-single.html"-->
                                  <div class="txt">
                                     <h5>Extension de cils</h5>
                                  </div>
                                  <!-- link -->
-                                 <!--p class="more-link">plus</p-->
+                                 <p class="more-link">plus</p>
                               </a>
                            </div>
                         </div>
@@ -241,12 +245,13 @@
                         <!-- card -->
                         <div class="col-lg-4 card-service-collumn">
                            <div class="card-service bg-5 border-bottom">
+                              <a id="btnLashLifting" href="#">
                               <!-- a href="service-single.html"-->
                                  <div class="txt">
                                     <h5>Lash lifting</h5>
                                  </div>
                                  <!-- link -->
-                                 <!--p class="more-link">plus</p-->
+                                 <p class="more-link">plus</p>
                               </a>
                            </div>
                         </div>
@@ -254,12 +259,13 @@
                         <!-- card -->
                         <div class="col-lg-4 card-service-collumn">
                            <div class="card-service bg-6 border-bottom">
+                              <a id="btnSobrancelha" href="#">
                               <!-- a href="service-single.html"-->
                                  <div class="txt">
                                     <h5>Sourcils</h5>
                                  </div>
                                  <!-- link -->
-                                 <!--p class="more-link">plus</p-->
+                                 <p class="more-link">plus</p>
                               </a>
                            </div>
                         </div>
@@ -267,12 +273,13 @@
                         <!-- card -->
                         <div class="col-lg-4 card-service-collumn">
                            <div class="card-service bg-7 border-bottom">
+                              <a id="btnLaser" href="#">
                               <!-- a href="service-single.html"-->
                                  <div class="txt">
                                     <h5>Épilation au laser </h5>
                                  </div>
                                  <!-- link -->
-                                 <!--p class="more-link">plus</p-->
+                                 <p class="more-link">plus</p>
                               </a>
                            </div>
                         </div>
@@ -280,12 +287,13 @@
                         <!-- card -->
                         <div class="col-lg-4 card-service-collumn">
                            <div class="card-service bg-8 border-bottom">
+                              <a id="btnClareamento" href="#">
                               <!-- a href="service-single.html"-->
                                  <div class="txt">
                                     <h5>Blanchiment dentaire</h5>
                                  </div>
                                  <!-- link -->
-                                 <!--p class="more-link">plus</p-->
+                                 <p class="more-link">plus</p>
                               </a>
                            </div>
                         </div>
@@ -307,9 +315,9 @@
                               <h3>
                                  Rend nous visite
                               </h3>
-                              <p class="mt-3">Surprenez-vous ! </p>
-                              <a href="contact.html" class="btn btn-secondary m-3">Contactez nous</a>
-                              <a href="index.html#rendez-vous" class="btn btn-secondary m-3">Rendez-vous</a>
+                              <p class="mt-3">Prendre rendez-vous ! </p>
+                              <a id="btnRdvEnLigne" href="#" class="btn btn-secondary m-3">En ligne</a>
+                              <a id="btnRdvWhatsapp" href="#" class="btn btn-secondary m-3">WhatsApp</a>
                            </div>
                            <!-- /col-xl -->
                         </div>
@@ -376,6 +384,11 @@
             </div>
             <!-- /content-wrapper -->
          </div>
+
+         <a id="btnRdvWhatsappFloat" href="#" class="whatsapp-float" target="_blank">
+            <i class="fab fa-whatsapp whatsapp-icon-float"></i>
+         </a>
+
          <!-- / content -->
       </div>
       <!-- Go To Top Link -->
@@ -390,7 +403,74 @@
             window.location.href = "https://shop.atelierrafaelaferreira.be";
          });
       </script>
-      <!-- End Facebook Pixel Button Functions -->
+      <script type="text/javascript">
+         $('#btnRdvEnLigne').click(function() {
+            fbq('track', 'InitiateCheckout');
+            window.location.href = "https://www.fresha.com/book-now/atelier-rafaela-ferreira-sejwrw9u/all-offer?id=889978&pId=837585";
+         });
+      </script>
+      <script type="text/javascript">
+         $('#btnRdvWhatsapp').click(function() {
+            fbq('track', 'Contact');
+            window.location.href = "https://api.whatsapp.com/send/?phone=32466459225&text&type=phone_number&app_absent=0";
+         });
+      </script>
+      <script type="text/javascript">
+         $('#btnRdvWhatsappFloat').click(function() {
+            fbq('track', 'Contact');
+            window.location.href = "https://api.whatsapp.com/send/?phone=32466459225&text&type=phone_number&app_absent=0";
+         });
+      </script>
 
+      <script type="text/javascript">
+         $('#btnUnhas').click(function() {
+            fbq('track', 'InitiateCheckout', { 'content_ids': 'unhas' });
+            window.location.href = "https://www.fresha.com/book-now/atelier-rafaela-ferreira-sejwrw9u/all-offer?id=889978&pId=837585";
+         });
+      </script>
+      <script type="text/javascript">
+         $('#btnManicure').click(function() {
+            fbq('track', 'InitiateCheckout', { 'content_ids': 'manicure' });
+            window.location.href = "https://www.fresha.com/book-now/atelier-rafaela-ferreira-sejwrw9u/all-offer?id=889978&pId=837585";
+         });
+      </script>
+      <script type="text/javascript">
+         $('#btnPedicure').click(function() {
+            fbq('track', 'InitiateCheckout', { 'content_ids': 'pedicure' });
+            window.location.href = "https://www.fresha.com/book-now/atelier-rafaela-ferreira-sejwrw9u/all-offer?id=889978&pId=837585";
+         });
+      </script>
+      <script type="text/javascript">
+         $('#btnCilios').click(function() {
+            fbq('track', 'InitiateCheckout', { 'content_ids': 'cilios' });
+            window.location.href = "https://www.fresha.com/book-now/atelier-rafaela-ferreira-sejwrw9u/all-offer?id=889978&pId=837585";
+         });
+      </script>
+      <script type="text/javascript">
+         $('#btnLashLifting').click(function() {
+            fbq('track', 'InitiateCheckout', { 'content_ids': 'lash-lifting' });
+            window.location.href = "https://www.fresha.com/book-now/atelier-rafaela-ferreira-sejwrw9u/all-offer?id=889978&pId=837585";
+         });
+      </script>
+      <script type="text/javascript">
+         $('#btnSobrancelha').click(function() {
+            fbq('track', 'InitiateCheckout', { 'content_ids': 'sobrancelha' });
+            window.location.href = "https://www.fresha.com/book-now/atelier-rafaela-ferreira-sejwrw9u/all-offer?id=889978&pId=837585";
+         });
+      </script>
+      <script type="text/javascript">
+         $('#btnClareamento').click(function() {
+            fbq('track', 'InitiateCheckout', { 'content_ids': 'clareamento' });
+            window.location.href = "https://www.fresha.com/book-now/atelier-rafaela-ferreira-sejwrw9u/all-offer?id=889978&pId=837585";
+         });
+      </script>
+      <script type="text/javascript">
+         $('#btnLaser').click(function() {
+            fbq('track', 'InitiateCheckout', { 'content_ids': 'laser' });
+            window.location.href = "https://www.fresha.com/book-now/atelier-rafaela-ferreira-sejwrw9u/all-offer?id=889978&pId=837585";
+         });
+      </script>
+
+      <!-- End Facebook Pixel Button Functions -->
    </body>
 </html>

@@ -620,6 +620,11 @@
          </div>
          <!-- /content-wrapper -->
       </div>
+
+      <a id="btnRdvWhatsappFloat" href="#" class="whatsapp-float" target="_blank">
+         <i class="fab fa-whatsapp whatsapp-icon-float"></i>
+      </a>
+
       <!-- / content -->
       <!-- Go To Top Link -->
       <div class="d-none d-lg-block d-xl-block">
@@ -641,6 +646,12 @@
       </script>
       <script type="text/javascript">
          $('#btnRdvWhatsapp').click(function() {
+            fbq('track', 'Contact');
+            window.location.href = "https://api.whatsapp.com/send/?phone=32466459225&text&type=phone_number&app_absent=0";
+         });
+      </script>
+      <script type="text/javascript">
+         $('#btnRdvWhatsappFloat').click(function() {
             fbq('track', 'Contact');
             window.location.href = "https://api.whatsapp.com/send/?phone=32466459225&text&type=phone_number&app_absent=0";
          });

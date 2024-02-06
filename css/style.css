@@ -1482,8 +1482,8 @@ Table of Contents
          padding: .5rem;
     }
      .navbar-collapse {
-         max-height:380px;
-         overflow-y: auto;
+         max-height:405px;
+         /*overflow-y: auto;*/
     }
      .navbar-collapse::-webkit-scrollbar {
          width: 10px;
@@ -1569,4 +1569,23 @@ Table of Contents
      .inside-wrapper.container{
          width:1000px;
     }
+}
+
+/*=========================== Whatsapp Floating Button ============================ */
+
+.whatsapp-float{
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:40px;
+    right:40px;
+    border-radius:70px;
+    text-align:center;
+    font-size:30px;
+    z-index:100;
+    background-color: black;
+}
+
+.whatsapp-icon-float{
+    margin-top:16px;
 }
