@@ -637,6 +637,10 @@ Table of Contents
 }
  .page-header{
      background: url("../img/pageheader.jpg");
+
+}
+  .pagelaser-header{
+      background: url("../img/pagelaserheader.jpg");
 }
 /* intro-home */
  #intro-home{
@@ -683,6 +687,17 @@ Table of Contents
 }
  .page-header h1{
      color:#fff!important;
+/* Page Laser Header */
+}     
+.pagelaser-header{
+        background-repeat: no-repeat;
+        background-size:cover;
+        text-align:center;
+        background-position:center;
+        padding: 5.0em;
+}
+    .pagelaser-header h1{
+        color:#fff!important;
 }
 /* Absolute image */
  .img-absolute1 {
@@ -1516,6 +1531,9 @@ Table of Contents
     }
      .page-header {
          padding: 3.0em 0 0em 0;
+    }
+     .pagelaser-header {
+        padding: 3.0em 0 0em 0;
     }
      .navbar {
          margin-bottom: 0px;
