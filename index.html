@@ -52,13 +52,15 @@
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window, document,'script',
                  'https://connect.facebook.net/en_US/fbevents.js');
+
+         fbq('consent', 'revoke');
          fbq('init', '1043413356547228');
          fbq('track', 'PageView');
       </script>
-      <noscript>
+      <!--noscript>
          <img height="1" width="1" style="display:none"
               src="https://www.facebook.com/tr?id=1043413356547228&ev=PageView&noscript=1"/>
-      </noscript>
+      </noscript-->
       <!-- End Facebook Pixel Code -->
 
       <!-- Google tag (gtag.js) -->
@@ -98,6 +100,59 @@
             <div class="bounce3"></div>
          </div>
       </div>
+
+      <!-- CookieConsent BEGIN -->
+
+      <div id="cookieConsentDialog">
+         <div class="cookieDialog">
+            <div class="cookieIn">
+               <div class="cookieBox">
+                  <!--a href="#" class="cookieClose" title="close">&#x2716;</a-->
+                  <h4>Consentement aux cookies</h4>
+                  <p>Ce site Web utilise des cookies pour personnaliser le contenu et analyser notre trafic.</p>
+
+                  <table>
+                     <tr>
+                        <td>
+                           <b>Nécessaire</b> - Cookies nécessaires pour rendre un site Web utilisable en activant les fonctions de base. Le site Web ne peut pas fonctionner correctement sans ces cookies. (toujours actif)
+                        </td>
+                        <td>
+                           <label class="switch">
+                              <input type="checkbox" name="necessaryCookiesConsent" id="necessaryCookiesConsent_input" disabled="disabled" checked="checked">
+                              <span class="checkboxSlider round"></span>
+                           </label>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <b>Marketing</b> : les cookies de marketing sont utilisés pour suivre les visiteurs sur les sites Web.
+                        </td>
+                        <td>
+                           <label class="switch">
+                              <input type="checkbox" name="marketingCookiesConsent" id="marketingCookiesConsent_input" checked="checked">
+                              <span class="checkboxSlider round"></span>
+                           </label>
+                        </td>
+                     </tr>
+                  </table>
+
+                  <br>
+                  <div>Vous pouvez en savoir plus sur les cookies et modifier vos paramètres de consentement aux cookies sur notre <a href="privacy-policy.html">page Politique de confidentialité</a></div>
+                  <br>
+
+                  <div id="cookieDialog_buttonbar" class="buttonbar">
+                     <input type="submit" name="" value="Save preferences" id="coookieDialog_save_button" class="cookieNoticeButton gray" title="">
+                     <input type="submit" name="" value="Allow all" id="coookieDialog_acceptAll_button" class="cookieNoticeButton green" title="">
+                  </div>
+
+               </div>
+            </div>
+         </div>
+         <div class="cookieOverlay"></div>
+      </div>
+
+      <!-- CookieConsent END -->
+
       <!-- ===== Page Content ===== -->
       <div class="container-fluid">
          <!-- ===== Sidebar starts ===== -->
@@ -682,6 +737,9 @@
          });
       </script>
       <!-- End Facebook Pixel Button Functions -->
+
+      <!-- load cookieConsent javascript -->
+      <script type="text/javascript" src="js/cookie-consent.js"></script>
 
    </body>
 </html>
