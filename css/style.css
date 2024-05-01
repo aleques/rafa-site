@@ -609,6 +609,18 @@ Table of Contents
     background-size:cover;
     background-image: url('../img/services/service8.jpg');
 }
+.card-service.bg-9 {
+    background-size:cover;
+    background-image: url('../img/services/service9.jpg');
+}
+.card-service.bg-10 {
+    background-size:cover;
+    background-image: url('../img/services/service10.jpg');
+}
+.card-service.bg-11 {
+    background-size:cover;
+    background-image: url('../img/services/service11.jpg');
+}
  #bg-about1 {
      background-size:cover;
      background-position: center;
