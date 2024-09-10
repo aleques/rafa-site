@@ -91,15 +91,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script>
    function consentGrantedAdStorage() {
-      alert ("hereeeee 1");
-      //document.getElementById("cookie-banner").display = 'none';
+      document.getElementById("cookie-banner").style.display = "none";
       gtag('consent', 'update', {
          'ad_storage': 'granted'
       });
    }
    function consentNotGranted() {
-      alert ("hereeeee 2");
-      //document.getElementById("cookie-banner").display = 'none';
+      document.getElementById("cookie-banner").style.display = "none";
       gtag('consent', 'update', {
          'ad_storage': 'denied'
       });
