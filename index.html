@@ -110,6 +110,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          }
       </script>
 
+      <script>
+
+         function closeMenu() {
+            document.getElementById("hamb-menu").click();
+         }
+
+      </script>
+
       <!-- Preloader -->
       <div id="preloader">
          <img src="img/logo.png" alt="" class="preloader-logo img-fluid center-block" >
@@ -135,7 +143,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                      <!-- /logo -->
                      <div class="justify-content-lg-end">
                         <!-- hamburger menu -->
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="hamb-menu">
                         <i class="fa fa-bars" aria-hidden="true"></i>
                         </button>
                      </div>
@@ -150,7 +158,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                               <a class="nav-link" href="services.html">Services</a>
                            </li>
                            <li class="nav-item">
-                              <a class="nav-link" href="index.html#rendez-vous">
+                              <a class="nav-link" onclick="closeMenu();" href="index.html#rendez-vous">
                                  Rendez-vous
                               </a>
                            </li>
