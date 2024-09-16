@@ -31,9 +31,36 @@
       <link href="styles/paleblue.css" rel="stylesheet">
       <!-- Prefix free -->
       <script src="js/prefixfree.min.js"></script>
+      <!-- cookie -->
+      <script src="js/cbanner.js"></script>
    </head>
    <!-- ==== body starts ==== -->
    <body id="top">
+
+      <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NPN8P5GC"
+                        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+
+      <script>
+         function consentGrantedAdStorage() {
+            gtag('consent', 'update', {
+               'ad_storage': 'granted',
+               'ad_user_data': 'granted',
+               'ad_personalization': 'granted',
+               'analytics_storage': 'granted'
+            });
+         }
+         function consentNotGranted() {
+            gtag('consent', 'update', {
+               'ad_storage': 'denied',
+               'ad_user_data': 'denied',
+               'ad_personalization': 'denied',
+               'analytics_storage': 'denied'
+            });
+         }
+      </script>
+
       <!-- Preloader -->
       <div id="preloader">
          <img src="img/logo.png" alt="" class="preloader-logo img-fluid center-block" >
@@ -414,5 +441,20 @@
       <script src="js/custom.js"></script>
       <script src="js/plugins.js"></script>
       <script src="js/animations.js"></script>
+
+      <div class="cookie-consent-banner" id="cookie-banner" style="display: none">
+         <div class="cookie-consent-banner__inner">
+            <div class="cookie-consent-banner__copy">
+               <div class="cookie-consent-banner__header">THIS WEBSITE USES COOKIES</div>
+               <div class="cookie-consent-banner__description">We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services. You consent to our cookies if you continue to use our website.</div>
+            </div>
+
+            <div class="cookie-consent-banner__actions">
+               <a href="#" onclick="consentGrantedAdStorage(); CookieBanner.accept();" class="cookie-consent-banner__cta">Ok</a>
+               <!--a href="#" onclick="consentNotGranted(); CookieBanner.reject()" class="cookie-consent-banner__cta cookie-consent-banner__cta--secondary">No</a-->
+            </div>
+         </div>
+      </div>
+
    </body>
 </html>

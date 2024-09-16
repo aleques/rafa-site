@@ -41,6 +41,8 @@
       <script src="js/animations.js"></script>
       <!-- Open Street maps -->
       <script src="js/map.js"></script>
+      <!-- cookie -->
+      <script src="js/cbanner.js"></script>
 
       <!-- Facebook Pixel Code -->
       <script>
@@ -84,25 +86,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    <!-- ==== body starts ==== -->
    <body id="top">
 
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NPN8P5GC"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+      <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NPN8P5GC"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
 
-<script>
-   function consentGrantedAdStorage() {
-      document.getElementById("cookie-banner").style.display = "none";
-      gtag('consent', 'update', {
-         'ad_storage': 'granted'
-      });
-   }
-   function consentNotGranted() {
-      document.getElementById("cookie-banner").style.display = "none";
-      gtag('consent', 'update', {
-         'ad_storage': 'denied'
-      });
-   }
-</script>
+      <script>
+         function consentGrantedAdStorage() {
+            gtag('consent', 'update', {
+               'ad_storage': 'granted',
+               'ad_user_data': 'granted',
+               'ad_personalization': 'granted',
+               'analytics_storage': 'granted'
+            });
+         }
+         function consentNotGranted() {
+            gtag('consent', 'update', {
+               'ad_storage': 'denied',
+               'ad_user_data': 'denied',
+               'ad_personalization': 'denied',
+               'analytics_storage': 'denied'
+            });
+         }
+      </script>
 
       <!-- Preloader -->
       <div id="preloader">
@@ -698,7 +704,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </script>
       <!-- End Facebook Pixel Button Functions -->
 
-   <div class="cookie-consent-banner" id="cookie-banner">
+   <div class="cookie-consent-banner" id="cookie-banner" style="display: none">
       <div class="cookie-consent-banner__inner">
          <div class="cookie-consent-banner__copy">
             <div class="cookie-consent-banner__header">THIS WEBSITE USES COOKIES</div>
@@ -706,8 +712,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
          </div>
 
          <div class="cookie-consent-banner__actions">
-            <button onclick="consentGrantedAdStorage()" class="cookie-consent-banner__cta">Yes</button>
-            <button onclick="consentNotGranted()" class="cookie-consent-banner__cta cookie-consent-banner__cta--secondary">No</button>
+            <a href="#" onclick="consentGrantedAdStorage(); CookieBanner.accept();" class="cookie-consent-banner__cta">Ok</a>
+            <!--a href="#" onclick="consentNotGranted(); CookieBanner.reject()" class="cookie-consent-banner__cta cookie-consent-banner__cta--secondary">No</a-->
          </div>
       </div>
    </div>
