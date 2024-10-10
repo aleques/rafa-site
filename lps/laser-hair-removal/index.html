@@ -6,11 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Atelier Rafaela Ferreira</title>
   <!-- Import styles -->
-   <link href="../../styles/reset.css" rel="stylesheet"/>
-   <link href="../../styles/normalize.css" rel="stylesheet"/>
-   <link href="./style.css" rel="stylesheet"/>
+  <link href="../../styles/reset.css" rel="stylesheet"/>
+  <link href="../../styles/normalize.css" rel="stylesheet"/>
+  <link href="./style.css" rel="stylesheet"/>
    <!-- Fav icons -->
-   <link rel="icon" href="./favicon.png" type="image/x-icon">
+  <link rel="icon" href="./favicon.png" type="image/x-icon">
+
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -41,6 +44,48 @@
     <picture class="main-image">
       <img alt="model" src="../../img/lps/Imagem_Home_mobile_crop.jpg">
     </picture>
+  </section>
+
+  <section id="testimonials">
+    <div class="testimonials container">
+      <div class="testimonials-content">
+        <h2 class="testimonials--title">Plus de 1 000 clients satisfaits avec des résultats incroyables</h2>
+        <p class="testeimonials--subtitle">Rejoignez nos clientes qui ont dit adieu aux poils et bonjour à une peau douce, grâce à nos experts et technologies de pointe.</p>
+        <a href="#" class="btn-main">Réservez votre séance</a>
+      </div>
+      <div class="testimonials-slide">
+        <div class="splide" role="group" aria-label="Splide Basic HTML Example">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide testimonial-slide--item">
+                <p class="testimonial-slide--text">Je n'ai jamais été aussi confiante avec ma peau. Un grand merci à l'équipe de l'Atelier Rafaela Ferreira !</p>
+                <div class="testimonial-slide--client">
+                  <picture class="testimonial-slide--client_img">
+                    <img src="../../img/lps/Ellipse 7.png" alt="client">
+                  </picture>
+                  <p class="testimonial-slide--client_name">Marie, 28 ans</p>
+                </div>
+                <picture class="testimonial-slide--img">
+                  <img src="../../img/lps/svgs/stars.svg" alt="stars">
+                </picture>
+              </li>
+              <li class="splide__slide testimonial-slide--item">
+                <p class="testimonial-slide--text">Le traitement est rapide et pratiquement indolore. Je recommande à toutes mes amies!</p>
+                <div class="testimonial-slide--client">
+                  <picture class="testimonial-slide--client_img">
+                    <img src="../../img/lps/Ellipse 8.png" alt="client">
+                  </picture>
+                  <p class="testimonial-slide--client_name">Marie, 28 ans</p>
+                </div>
+                <picture class="testimonial-slide--img">
+                  <img src="../../img/lps/svgs/stars.svg" alt="stars">
+                </picture>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section id="what">
@@ -249,8 +294,27 @@
   <script>
     if (typeof httfox_toggleAccordion !== 'undefined') {
       const accordion = new httfox_toggleAccordion('httfox-accordion');
-      accordion.init()
+      accordion.init();
     }
+  </script>
+
+  <script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+      var splide = new Splide( '.splide', {
+        perPage    : 2,
+        perMove    : 1,
+        focus      : 'center',
+        trimSpace  : false,
+        gap: 25,
+        breakpoints: {
+          600: {
+            focus: 'left',
+            perPage: 1.2,
+          },
+        },
+      });
+      splide.mount();
+    } );
   </script>
 </body>
 </html>

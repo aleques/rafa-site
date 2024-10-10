@@ -33,4 +33,5 @@
   });
 
   buttons[0].click();
+  buttons[0].setAttribute('aria-expanded', 'true');
 })();
