@@ -104,6 +104,13 @@ p, a, strong, b {
   max-width: calc(100% + 2rem);
 }
 
+@media (max-width: 700px) {
+  #header {
+    background-color: var(--color-bg-main-alt);
+    padding-bottom: 0;
+  }
+}
+
 #header .header {
   background-color: #fff;
   border-radius: 2.3rem;
@@ -116,6 +123,8 @@ p, a, strong, b {
 @media (max-width: 700px) {
   #header .header {
     justify-content: center;
+    background: transparent;
+    padding: 0;
   }
 }
 
@@ -163,7 +172,7 @@ p, a, strong, b {
 
 @media (max-width: 700px) {
   .main {
-    padding: 2rem 1.25rem 0;
+    padding: 2rem 1.25rem 2.563rem;
     background-image: none;
   }
 }
@@ -177,7 +186,7 @@ p, a, strong, b {
 
 .main-content--subtitle {
   max-width: 31rem;
-  margin-bottom: 3.438rem;
+  margin-bottom: 2.563rem;
 }
 
 @media (max-width: 984px) {
@@ -432,6 +441,7 @@ p, a, strong, b {
   font-weight: 800;
   max-width: 25rem;
   margin-bottom: 2.563rem;
+  font-size: clamp(2rem, 5vw, 3.75rem);
 }
 
 .spa-content--subtitle {
@@ -625,12 +635,8 @@ p, a, strong, b {
 
 @media (max-width: 700px) {
   #legs {
-    background: linear-gradient(118deg, rgba(251, 231, 232, 0.7) 0%, rgba(244, 224, 225, 0.9) 60%),
-                url('../../img/lps/Parte_Baixo 2.jpg') !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    padding: 6rem 0;
+    background-color: var(--color-bg-main-alt-grab);
+    padding: 3rem 0;
   }
 
   .legs {
@@ -765,6 +771,9 @@ p, a, strong, b {
     grid-template-columns: 1fr;
     padding: 3rem;
     text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 1.125rem;
+    gap: 2rem;
   }
 
   .footer-logo {
@@ -794,8 +803,8 @@ p, a, strong, b {
 
 @media (max-width: 777px) {
   .copyright {
-    padding: 3rem;
-    gap: 3rem;
+    padding: 1.25rem 3rem;
+    gap: 1rem;
     flex-direction: column;
     justify-content: center;
   }
