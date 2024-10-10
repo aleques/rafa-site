@@ -106,7 +106,9 @@ p, a, strong, b {
 
 @media (max-width: 700px) {
   #header {
-    background-color: #fff;
+    background-color: var(--color-bg-main-alt);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 }
 
@@ -122,8 +124,8 @@ p, a, strong, b {
 @media (max-width: 700px) {
   #header .header {
     justify-content: center;
-    background: transparent;
-    padding: 0;
+    /* background: transparent; */
+    /* padding: 0; */
   }
 }
 
