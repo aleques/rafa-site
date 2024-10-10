@@ -113,6 +113,12 @@ p, a, strong, b {
   justify-content: space-between;
 }
 
+@media (max-width: 700px) {
+  #header .header {
+    justify-content: center;
+  }
+}
+
 .header-menu {
   display: flex;
   align-items: center;
@@ -425,11 +431,6 @@ p, a, strong, b {
   justify-content: end;
 }
 
-/* @media (max-width: 1087px) {
-  .price--image {
-    display: none;
-  }
-} */
 
 .price--image img {
   position: absolute;
@@ -447,6 +448,48 @@ p, a, strong, b {
     position: relative;
   }
 }
+
+/* FAQ */
+
+#faq {
+  padding: 4rem 0 0;
+}
+
+.faq--title {
+  color: var(--color-title);
+  font-weight: 800;
+  margin-bottom: 3rem;
+}
+
+.faq-content {
+  display: grid;
+  grid-template-columns: 6.5fr 5fr;
+  gap: 3rem;
+}
+
+@media (max-width: 700px) {
+  .faq-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.faq-output--title {
+  font-family: var(--font-title);
+  font-weight: 800;
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+
+@media (max-width: 700px) {
+  .faq-content--output {
+    display: none;
+  }
+}
+
+/* .faq-content--accordion {
+
+} */
 
 /* CTA */
 #cta {
@@ -706,4 +749,163 @@ p, a, strong, b {
 
 .copyright-policy {
   color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root {
+  --bg: #fff;
+  --text: #7288a2;
+  --gray: #4d5974;
+  --lightgray: #e5e5e5;
+  --blue: #03b5d2;
+}
+
+.accordion {
+
+  /* Button styling */
+  .accordion-item--header {
+    position: relative;
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 1em 0;
+    color: var(--text);
+    font-size: 1.15rem;
+    font-weight: 400;
+    border: none;
+    background: none;
+    outline: none;
+  }
+
+  .accordion-item--header:hover, .accordion-item--header:focus {
+    cursor: pointer;
+    color: var(--blue);
+  }
+
+  .accordion-item--header:hover::after, .accordion-item--header:focus::after {
+    cursor: pointer;
+    color: var(--blue);
+    border: 1px solid var(--blue);
+  }
+
+  .accordion-item--header {
+    padding: 1.7rem;
+    background-color: #fff;
+    border-radius: 3rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .accordion-item--circle_indicator {
+    --dimensions: 1.54rem;
+    min-width: var(--dimensions);
+    height: var(--dimensions);
+    background-color: #FAF7FF;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 1rem;
+  }
+
+  .accordion-title {
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    font-family: var(--font-title);
+    color: #000;
+  }
+
+  .icon {
+    max-width: 1.5rem;
+    margin-left: auto;
+    transition: 0.2s;
+  }
+
+  /* .icon {
+    display: inline-block;
+    position: absolute;
+    top: 18px;
+    right: 0;
+    width: 22px;
+    height: 22px;
+    border: 1px solid;
+    border-radius: 22px;
+  }
+
+  .icon::before {
+    display: block;
+    position: absolute;
+    content: '';
+    top: 9px;
+    left: 5px;
+    width: 10px;
+    height: 2px;
+    background: currentColor;
+  }
+
+  .icon::after {
+    display: block;
+    position: absolute;
+    content: '';
+    top: 5px;
+    left: 9px;
+    width: 2px;
+    height: 10px;
+    background: currentColor;
+  } */
+
+  /* Expanded button */
+  .accordion-item--header[aria-expanded='true'] {
+    background-color: var(--color-bg-main-alt-grab);
+  }
+
+  .accordion-item--header[aria-expanded='true'] .accordion-item--circle_indicator {
+    background-color: var(--color-title);
+  }
+
+  .accordion-item--header[aria-expanded='true'] .accordion-title {
+    font-weight: 800;
+  }
+
+  .accordion-item--header[aria-expanded='true'].active .icon {
+    transform: rotate(90deg);
+  }
+
+  .accordion-item--header[aria-expanded='true'].active + .accordion-item--content {
+    opacity: 1;
+    max-height: 100vh;
+    transition: all 400ms linear;
+    will-change: opacity, max-height;
+  }
+
+  /* Accordion content */
+  .accordion-item--content {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 200ms linear, max-height 200ms linear;
+    will-change: opacity, max-height;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .accordion-item--content p {
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 2em 0;
+  }
 }

@@ -10,10 +10,7 @@
    <link href="../../styles/normalize.css" rel="stylesheet"/>
    <link href="./style.css" rel="stylesheet"/>
    <!-- Fav icons -->
-   <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
-   <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
-   <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
-   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+   <link rel="icon" href="./favicon.png" type="image/x-icon">
 </head>
 
 <body>
@@ -129,6 +126,39 @@
       </picture>
     </div>
   </section>
+
+  <section id="faq">
+    <div class="container">
+      <h2 class="faq--title">Questions <br/>fréquemment posées</h2>
+
+      <div class="faq-content">
+        <ul class="faq-content--accordion accordion" id="httfox-accordion">
+          <li class="accordion-item">
+            <button class="accordion-item--header" aria-expanded="false"><span class="accordion-item--circle_indicator"></span><span class="accordion-title">Why is the moon sometimes out during the day?</span><span class="icon"><img src="../../img/lps/svgs/akar-icons_chevron-right.svg"></span></button>
+            <div class="accordion-item--content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+            </div>
+          </li>
+          <li class="accordion-item">
+            <button class="accordion-item--header" aria-expanded="false"><span class="accordion-item--circle_indicator"></span><span class="accordion-title">Why is the moon sometimes out during the day?</span><span class="icon"><img src="../../img/lps/svgs/akar-icons_chevron-right.svg"></span></button>
+            <div class="accordion-item--content">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, modi Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, modi Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, modi Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, modi. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+            </div>
+          </li>
+          <li class="accordion-item">
+            <button class="accordion-item--header" aria-expanded="false"><span class="accordion-item--circle_indicator"></span><span class="accordion-title">Why is the moon sometimes out during the day?</span><span class="icon"><img src="../../img/lps/svgs/akar-icons_chevron-right.svg"></span></button>
+            <div class="accordion-item--content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+            </div>
+          </li>
+        </ul>
+        <div class="faq-content--output">
+          <p class="faq-output--title"></p>
+          <p class="faq-output--content"></p>
+        </div>
+      </div>
+    </div>
+  </section>
   
   <section id="cta">
     <div class="container cta--box">
@@ -212,5 +242,15 @@
       <a class="copyright-policy" href="#">Politique de confidentialité</a>
     </div>
   </footer>
+
+  <script src="../../js/class-toggle-accordion.js"></script>
+  <script src="./script.js"></script>
+
+  <script>
+    if (typeof httfox_toggleAccordion !== 'undefined') {
+      const accordion = new httfox_toggleAccordion('httfox-accordion');
+      accordion.init()
+    }
+  </script>
 </body>
 </html>
