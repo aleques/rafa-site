@@ -148,6 +148,9 @@ sup {
 /**
  * Remove the border on images inside links in IE 10.
  */
+picture, img {
+  display: block;
+}
 
 img {
   border-style: none;
