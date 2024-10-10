@@ -520,7 +520,6 @@ p, a, strong, b {
 .price--image img {
   position: absolute;
   bottom: -6.688rem;
-  /* min-width: 180%; */
   min-width: 73vw;
   left: -3rem;
 }
@@ -534,6 +533,11 @@ p, a, strong, b {
   }
 }
 
+@media (min-width: 1537px) {
+  .price--image img {
+    min-width: 58vw;
+  }
+}
 /* FAQ */
 
 #faq {
