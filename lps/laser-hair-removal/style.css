@@ -538,16 +538,16 @@ p, a, strong, b {
 }
 
 /* Contact */
-#contactLpHertz {
+#contact {
   padding: 3rem 0 5rem;
 }
 
-#contactLpHertz .contact {
+.contact {
   border-radius: var(--border-radius-section);
   overflow: hidden;
 }
 
-#contactLpHertz .contact-content {
+.contact-content {
   padding: 6rem;
   background-color: var(--color-bg-main-alt);
   display: grid;
@@ -557,24 +557,24 @@ p, a, strong, b {
 }
 
 @media (max-width: 700px) {
-  #contactLpHertz .contact-content {
+  .contact-content {
     padding: 2rem;
     padding-bottom: 3rem;
     grid-template-columns: 1fr;
   }
 }
 
-#contactLpHertz .contact-content--main {
+.contact-content--main {
   max-width: 27rem;
 }
 
-#contactLpHertz .contact-main--title {
+.contact-main--title {
   font-weight: 800;
   color: var(--color-title);
   margin-bottom: 1.125rem;
 }
 
-#contactLpHertz .contact-info--img {
+.contact-info--img {
   background-color: var(--color-title);
   border-radius: 50%;
   padding: 0.85rem;
@@ -583,32 +583,32 @@ p, a, strong, b {
   height: var(--dimensions);
 }
 
-#contactLpHertz .contact-content--info {
+.contact-content--info {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
 @media (max-width: 700px) {
-  #contactLpHertz .contact-content--info {
+  .contact-content--info {
     gap: 2rem;
   }
 }
 
-#contactLpHertz .contact-info--link {
+.contact-info--link {
   display: flex;
   gap: 1.125rem;
   align-items: center;
 }
 
 @media (max-width: 700px) {
-  #contactLpHertz .contact-info--link {
+  .contact-info--link {
     flex-direction: column;
     gap: 1rem;
   }
 }
 
-#contactLpHertz .contact-info--content {
+.contact-info--content {
   font-size: clamp(1rem, 2vw, 1.25rem);
   font-family: var(--font-body);
   font-weight: 800;
