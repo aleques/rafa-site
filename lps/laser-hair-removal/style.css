@@ -822,10 +822,6 @@ p, a, strong, b {
     flex-direction: column;
   }
 }
-/* .copyright-dev--link {
-  display: inline;
-} */
-
 
 .copyright-dev--logo {
   max-width: 80px;
