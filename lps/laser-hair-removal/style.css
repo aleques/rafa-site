@@ -106,8 +106,7 @@ p, a, strong, b {
 
 @media (max-width: 700px) {
   #header {
-    background-color: var(--color-bg-main-alt);
-    padding-bottom: 0;
+    background-color: #fff;
   }
 }
 
@@ -268,6 +267,12 @@ p, a, strong, b {
   margin-bottom: 2rem;
 }
 
+@media (max-width: 700px) {
+  .testimonial-slide--text {
+    font-size: 1rem;
+  }
+}
+
 .testimonial-slide--client {
   display: flex;
   align-items: center;
@@ -282,6 +287,10 @@ p, a, strong, b {
   font-family: var(--font-title);
   font-size: 1.25rem;
   font-weight: 800;
+}
+
+.testimonial-slide--client_img {
+  display: none;
 }
 
 .testimonial-slide--img {
