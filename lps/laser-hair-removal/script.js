@@ -1,4 +1,4 @@
-(() => {
+(() => { // Function to change FAQ behavior on desktop
   if (window.innerWidth < 700) return null;
 
   const boxAccordion = document.getElementById('httfox-accordion');
@@ -34,4 +34,18 @@
 
   buttons[0].click();
   buttons[0].setAttribute('aria-expanded', 'true');
+})();
+
+
+(() => {
+  const slideBox = document.getElementById('slide-container');
+  if (!slideBox) return null;
+
+  const rect = slideBox.getBoundingClientRect();
+  const elementWidth = rect.width; // ou rect.right - rect.left
+
+  if (elementWidth) {
+    slideBox.setAttribute('style', `max-width: ${elementWidth}px;`);
+    console.log('Largura do elemento:', elementWidth);
+  }
 })();

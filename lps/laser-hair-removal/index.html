@@ -69,7 +69,7 @@
         <p class="testeimonials--subtitle">Rejoignez nos clientes qui ont dit adieu aux poils et bonjour à une peau douce, grâce à nos experts et technologies de pointe.</p>
         <a href="https://www.fresha.com/fr/a/atelier-rafaela-ferreira-uccle-rue-des-trois-arbres-62-uqbhg5zh/booking?employeeId=3200405&pId=837585" class="btn-main">Réservez votre séance</a>
       </div>
-      <div class="testimonials-slide">
+      <div id="slide-container" class="testimonials-slide" style="max-width: 630px;">
         <div class="splide" role="group" aria-label="Splide Basic HTML Example">
           <div class="splide__track">
             <ul class="splide__list">
@@ -85,6 +85,7 @@
                   <img src="../../img/lps/svgs/stars.svg" alt="stars">
                 </picture>
               </li>
+
               <li class="splide__slide testimonial-slide--item">
                 <p class="testimonial-slide--text">Le traitement est rapide et pratiquement indolore. Je recommande à toutes mes amies !</p>
                 <div class="testimonial-slide--client">
@@ -97,6 +98,7 @@
                   <img src="../../img/lps/svgs/stars.svg" alt="stars">
                 </picture>
               </li>
+
               <li class="splide__slide testimonial-slide--item">
                 <p class="testimonial-slide--text">Après seulement 3 séances, les résultats étaient incroyables. Ma peau est si lisse !</p>
                 <div class="testimonial-slide--client">
@@ -109,8 +111,7 @@
                   <img src="../../img/lps/svgs/stars.svg" alt="stars">
                 </picture>
               </li>
-
-
+              
               <li class="splide__slide testimonial-slide--item">
                 <p class="testimonial-slide--text">La différence est incroyable. Dès ma première séance, j'ai vu des résultats visibles !</p>
                 <div class="testimonial-slide--client">
@@ -123,8 +124,7 @@
                   <img src="../../img/lps/svgs/stars.svg" alt="stars">
                 </picture>
               </li>
-
-
+              
               <li class="splide__slide testimonial-slide--item">
                 <p class="testimonial-slide--text">Je n'aurais jamais cru qu'épiler au laser serait aussi simple et efficace. Je suis ravie !</p>
                 <div class="testimonial-slide--client">
@@ -137,7 +137,8 @@
                   <img src="../../img/lps/svgs/stars.svg" alt="stars">
                 </picture>
               </li>
-
+              
+              
 
               <li class="splide__slide testimonial-slide--item">
                 <p class="testimonial-slide--text">Le suivi est parfait, et chaque séance est une étape de plus vers la liberté des poils.</p>
@@ -448,20 +449,21 @@
 
   <script>
     document.addEventListener( 'DOMContentLoaded', function() {
-      var splide = new Splide( '.splide', {
-        perPage    : 2,
-        perMove    : 1,
-        focus      : 'center',
-        trimSpace  : false,
-        gap: 25,
-        breakpoints: {
-          600: {
-            focus: 'left',
-            perPage: 1.2,
+        var splide = new Splide( '.splide', {
+          perPage    : 2,
+          perMove    : 1,
+          focus      : 'center',
+          trimSpace  : false,
+          gap: 25,
+          breakpoints: {
+            600: {
+              focus: 'left',
+              perPage: 1.2,
+            },
           },
-        },
-      });
-      splide.mount();
+        });
+        splide.mount();
+
     } );
   </script>
 

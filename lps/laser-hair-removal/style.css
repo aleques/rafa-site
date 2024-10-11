@@ -100,8 +100,13 @@ p, a, strong, b {
 }
 
 #header {
-  padding: 2rem;
   max-width: calc(100% + 2rem);
+}
+
+@media (min-width: 700px) {
+  #header {
+    padding: 2rem;
+  }
 }
 
 @media (max-width: 700px) {
@@ -271,7 +276,7 @@ p, a, strong, b {
 
 @media (max-width: 700px) {
   .testimonial-slide--text {
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 
