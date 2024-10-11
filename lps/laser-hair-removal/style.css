@@ -263,7 +263,6 @@ p, a, strong, b {
 }
 
 .testimonial-slide--item {
-  /* display: none; */
   background-color: var(--color-bg-main-alt-grab);
   padding: 2rem;
   border-radius: var(--border-radius-section);
@@ -294,10 +293,6 @@ p, a, strong, b {
   font-family: var(--font-title);
   font-size: 1.25rem;
   font-weight: 800;
-}
-
-.testimonial-slide--client_img {
-  display: none;
 }
 
 .testimonial-slide--img {
