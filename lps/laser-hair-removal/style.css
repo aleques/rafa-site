@@ -81,6 +81,11 @@ p, a, strong, b {
   .mobile {
     display: none;
   }
+
+  /* Move o botao de cokies para cima */
+  .cky-btn-revisit-wrapper {
+    bottom: 90px;
+  }
 }
 
 .default-text-body,
@@ -832,7 +837,7 @@ p, a, strong, b {
 
 @media (max-width: 777px) {
   .copyright {
-    padding: 1.25rem 3rem;
+    padding: 1.25rem 3rem 7rem;
     gap: 1rem;
     flex-direction: column;
     justify-content: center;
@@ -869,7 +874,35 @@ p, a, strong, b {
   width: 100%;
   z-index: 333;
   box-shadow: 0 -5px 10px #00000037;
-  display: none;
+  transition: 0.3s;
+  transform: translateY(100%);
+}
+
+.floating-main-button.show {
+  animation: showDownm 0.5s forwards;
+}
+
+@keyframes showDownm {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.floating-main-button:not(.show) {
+  animation: hiddenDownm 0.5s forwards;
+  visibility: hidden;
+}
+
+@keyframes hiddenDownm {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(100%);
+  }
 }
 
 .floating-main-button .btn-main {
