@@ -81,7 +81,7 @@ p, a, strong, b {
   .mobile {
     display: none;
   }
-
+  
   /* Move o botao de cokies para cima */
   .cky-btn-revisit-wrapper {
     bottom: 90px;
