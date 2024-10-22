@@ -80,6 +80,14 @@ p, a, strong, b {
 @media (min-width: 700px) {
   .mobile {
     display: none;
+  }  
+}
+
+
+@media (max-width: 700px) {
+/* Move o botao de cokies para cima */
+  .cky-btn-revisit-wrapper {
+    bottom: 90px !important;
   }
   
   /* Move o botao de cokies para cima */
