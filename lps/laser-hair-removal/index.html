@@ -440,11 +440,12 @@
     </div>
   </footer>
 
-  <div class="floating-main-button mobile">
+  <div id="floating-main-button" class="floating-main-button mobile">
     <a href="https://wa.me/32466459225?text=Bonjour,%20je%20viens%20du%20site%20internet%20et%20j%E2%80%99aimerais%20obtenir%20plus%20d%E2%80%99informations%20sur%20les%20forfaits%20de%20laser." class="btn-main">Réservez votre séance</a>
   </div>
 
   <script src="../../js/class-toggle-accordion.js"></script>
+  <script src="../../js/listem-scroll-y.js"></script>
   <script src="./script.js"></script>
 
   <script>
@@ -472,6 +473,19 @@
         splide.mount();
 
     } );
+  </script>
+
+  <script>
+    // Adiciona o event listener para escutar o evento de scroll
+    window.addEventListener('scroll', () => {
+      const statusScroll = detectarScroll(600);
+      const boxMainButton = document.getElementById('floating-main-button');
+
+      if (boxMainButton) {
+        if (statusScroll.isBigger) boxMainButton.classList.add('show');
+        else boxMainButton.classList.remove('show');
+      }
+    });
   </script>
 
   <!-- Google Tag Manager (noscript) -->
