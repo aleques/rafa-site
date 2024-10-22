@@ -40,6 +40,7 @@
   --color-bg-main-alt: #F3E5E5;
   --color-bg-main-alt-grab: #FBE7E8;
   --color-bg-second: #845C52;
+  --color-cta-main: #FFC042;
   --color-title: #855262;
   --font-title: 'Mencken', Arial, sans-serif;
   --font-body: 'NotoSans', sans-serif;
@@ -76,21 +77,35 @@ p, a, strong, b {
   margin-left: 8px;
 }
 
+@media (min-width: 700px) {
+  .mobile {
+    display: none;
+  }
+}
+
 .default-text-body,
 .default-text-body * {
   font-size: clamp(1rem, 2vw, 1.25rem);
 }
 
 .btn-main {
-  border: 1px solid var(--color-bg-second);
+  border: 1px solid var(--color-cta-main);
+  background-color: var(--color-cta-main);
   border-radius: 2.2rem;
   padding: 0.9rem 5rem;
   display: block;
   max-width: fit-content;
   text-align: center;
   cursor: pointer;
-  color: #000;
+  color: #2D1E00;
   font-size: clamp(1rem, 2vw, 1.25rem);
+  transition: 0.3s;
+}
+
+.btn-main:hover {
+  background-color: var(--color-title);
+  border-color: var(--color-title);
+  color: #fff;
 }
 
 @media (max-width: 700px) {
@@ -516,9 +531,8 @@ p, a, strong, b {
   font-size: 0.8rem;
 }
 
-.price-content--button.btn-main {
+.price-content--button.btn-main:hover {
   border-color: #fff;
-  color: #fff;
 }
 
 .price--image {
@@ -846,13 +860,42 @@ p, a, strong, b {
   color: #fff;
 }
 
+.floating-main-button {
+  padding: 1rem 1.25rem;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 333;
+  box-shadow: 0 -5px 10px #00000037;
+  display: none;
+}
 
+.floating-main-button .btn-main {
+  margin: 0 auto;
+  min-width: 100%;
+}
 
+.floating-main-button .btn-main {
+  animation: alerta 1.5s infinite;
+  box-shadow: 0 0 0 0 #FFC042;
+  transition: background, padding 500ms ease-in-out;  
+}
 
-
-
-
-
+@keyframes alerta {
+  0% {
+    transform: scale();
+  }
+  70% {
+    transform: scale();
+    box-shadow: 0 0 0 10px rgba(69, 152, 27, 0);
+  }
+    100% {
+    transform: scale();
+    box-shadow: 0 0 0 0 rgba(69, 152, 27, 0);
+  }
+}
 
 
 
@@ -929,39 +972,6 @@ p, a, strong, b {
     margin-left: auto;
     transition: 0.2s;
   }
-
-  /* .icon {
-    display: inline-block;
-    position: absolute;
-    top: 18px;
-    right: 0;
-    width: 22px;
-    height: 22px;
-    border: 1px solid;
-    border-radius: 22px;
-  }
-
-  .icon::before {
-    display: block;
-    position: absolute;
-    content: '';
-    top: 9px;
-    left: 5px;
-    width: 10px;
-    height: 2px;
-    background: currentColor;
-  }
-
-  .icon::after {
-    display: block;
-    position: absolute;
-    content: '';
-    top: 5px;
-    left: 9px;
-    width: 2px;
-    height: 10px;
-    background: currentColor;
-  } */
 
   /* Expanded button */
   .accordion-item--header[aria-expanded='true'] {
