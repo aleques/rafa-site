@@ -89,6 +89,11 @@ p, a, strong, b {
   .cky-btn-revisit-wrapper {
     bottom: 90px !important;
   }
+  
+  /* Move o botao de cokies para cima */
+  .cky-btn-revisit-wrapper {
+    bottom: 90px;
+  }
 }
 
 .default-text-body,
