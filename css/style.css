@@ -621,6 +621,31 @@ Table of Contents
     background-size:cover;
     background-image: url('../img/services/service11.jpg');
 }
+
+
+.card-service.bg-eyelash-1 {
+    background-size:cover;
+    background-image: url('../img/eyelash/eyelash-fil-a-fil-01-thumb.jpeg');
+}
+.card-service.bg-eyelash-2 {
+    background-size:cover;
+    background-image: url('../img/eyelash/eyelash-egyptien-01-thumb.jpeg');
+}
+.card-service.bg-eyelash-3 {
+    background-size:cover;
+    background-image: url('../img/eyelash/eyelash-bresillien-01-thumb.jpeg');
+}
+.card-service.bg-eyelash-4 {
+    background-size:cover;
+    background-image: url('../img/eyelash/eyelash-russe-01-thumb.jpg');
+}
+.card-service.bg-eyelash-5 {
+    background-size:cover;
+    background-image: url('../img/eyelash/eyelash-fox-01-thumb.jpeg');
+}
+
+
+
  #bg-about1 {
      background-size:cover;
      background-position: center;
@@ -654,11 +679,16 @@ Table of Contents
 }
  .page-header{
      background: url("../img/pageheader.jpg");
+}
 
+.pagelaser-header{
+    background: url("../img/pagelaserheader.jpg");
 }
-  .pagelaser-header{
-      background: url("../img/pagelaserheader.jpg");
+
+.pageeyelash-header {
+    background: url("../img/eyelash/pageheader-eyelash.jpg");
 }
+
 /* intro-home */
  #intro-home{
      background-size:cover;
@@ -704,8 +734,8 @@ Table of Contents
 }
  .page-header h1{
      color:#fff!important;
+}
 /* Page Laser Header */
-}     
 .pagelaser-header{
         background-repeat: no-repeat;
         background-size:cover;
@@ -713,8 +743,19 @@ Table of Contents
         background-position:center;
         padding: 5.0em;
 }
-    .pagelaser-header h1{
-        color:#fff!important;
+.pagelaser-header h1{
+    color:#fff!important;
+}
+/* Page Eyelash Header */
+.pageeyelash-header{
+    background-repeat: no-repeat;
+    background-size:cover;
+    text-align:center;
+    background-position:center;
+    padding: 5.0em;
+}
+.pageeyelash-header h1{
+    color:#fff!important;
 }
 /* Absolute image */
  .img-absolute1 {
@@ -1139,7 +1180,7 @@ Table of Contents
      padding: 20px 0;
      z-index: 3;
      font-size: 0.7rem;
-     opacity:0;
+     opacity:1;
      margin-left: 1rem;
      position: relative;
      bottom: -0.5rem;
@@ -1552,6 +1593,9 @@ Table of Contents
      .pagelaser-header {
         padding: 3.0em 0 0em 0;
     }
+     .pageeyelash-header {
+         padding: 3.0em 0 0em 0;
+     }
      .navbar {
          margin-bottom: 0px;
     }
