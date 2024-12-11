@@ -643,6 +643,10 @@ Table of Contents
     background-size:cover;
     background-image: url('../img/eyelash/eyelash-fox-01-thumb.jpeg');
 }
+.card-service.bg-eyelash-6 {
+    background-size:cover;
+    background-image: url('../img/eyelash/eyelash-lashlift-01.jpg');
+}
 
 
 
