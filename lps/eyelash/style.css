@@ -36,16 +36,23 @@
 }
 
 :root {
-  --color-bg-main: #FFF6F6;
-  --color-bg-main-alt: #F3E5E5;
-  --color-bg-main-alt-grab: #FBE7E8;
-  --color-bg-second: #845C52;
-  --color-cta-main: #FFC042;
-  --color-title: #855262;
+  --color-bg-main: #fbf7ff;
+  --color-bg-main-alt: #f3eaff;
+  --color-bg-main-alt-grab: #f3eaff;
+  --color-bg-second: #2D283C;
+  --color-cta-main: #ffffff;
+  --color-title: #704375;
   --font-title: 'Mencken', Arial, sans-serif;
   --font-body: 'NotoSans', sans-serif;
   --border-radius-section: 2.3rem;
 }
+
+/*
+  Atelier Cílios
+  background: #fbf7ff
+  Primaria: #704375
+  Secundária: #f3eaff
+*/
 
 html * {
   font-size: 16px;
@@ -102,7 +109,7 @@ p, a, strong, b {
 }
 
 .btn-main {
-  border: 1px solid var(--color-cta-main);
+  border: 1px solid var(--color-title);
   background-color: var(--color-cta-main);
   border-radius: 2.2rem;
   padding: 0.9rem 5rem;
@@ -189,7 +196,7 @@ p, a, strong, b {
 /* Main sections */
 
 .main {
-  background-image: url('../../img/lps/Imagem_Home.jpg');
+  background-image: url('../../img/lps/eyelash/Imagem_Home.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -381,7 +388,7 @@ p, a, strong, b {
 
 .what--image img {
   position: absolute;
-  max-width: 75%;
+  max-width: 90%;
   bottom: -6.688rem;
 }
 
@@ -558,22 +565,27 @@ p, a, strong, b {
 .price--image img {
   position: absolute;
   bottom: -6.688rem;
-  min-width: 73vw;
-  left: -3rem;
+  /*min-width: 73vw;*/
+  left: -8rem;
+  width: unset !important;
+  max-width: unset !important;
+  max-height: 670px;
 }
 
 @media (max-width: 700px) {
   .price--image img {
     min-width: auto;
     bottom: -2rem;
-    left: 0;
+    min-width: 90vw;
+    left: unset;
+    max-width: 100% !important;
     position: relative;
   }
 }
 
 @media (min-width: 1537px) {
   .price--image img {
-    min-width: 58vw;
+    /*min-width: 58vw;*/
   }
 }
 /* FAQ */
@@ -920,7 +932,7 @@ p, a, strong, b {
 
 .floating-main-button .btn-main {
   animation: alerta 1.5s infinite;
-  box-shadow: 0 0 0 0 #FFC042;
+  box-shadow: 0 0 0 0 #704375;
   transition: background, padding 500ms ease-in-out;  
 }
 
