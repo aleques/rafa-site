@@ -214,7 +214,7 @@ p, a, strong, b {
 .main-content--title {
   color: var(--color-title);
   font-weight: 800;
-  max-width: 41rem;
+  max-width: 40.438rem;
   margin-bottom: 2.563rem;
 }
 
