@@ -217,7 +217,7 @@ p, a, strong, b {
 /* Main sections */
 
 .main {
-  background-image: url('../../img/lps/eyelash/Imagem_Home.jpg');
+  background-image: url('../../img/lps/nails/unha5-2.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -355,6 +355,14 @@ p, a, strong, b {
   max-width: 9rem;
 }
 
+.splide__pagination {
+  position: absolute !important;
+  bottom: -30px !important; /* Mantém a altura ajustada */
+  left: 0%; /* Aumente esse valor para mover mais para a direita */
+  transform: translateX(0%); /* Mantém o centro relativo ao novo 'left' */
+}
+
+
 /* What */
 .what {
   border-radius: var(--border-radius-section);
@@ -409,8 +417,8 @@ p, a, strong, b {
 
 .what--image img {
   position: absolute;
-  max-width: 90%;
-  bottom: -6.688rem;
+  max-width: 110%;
+  bottom: -6.688em;
 }
 
 /* Cards */
@@ -576,39 +584,45 @@ p, a, strong, b {
   border-color: #fff;
 }
 
+/* Mantém o layout do desktop */
 .price--image {
   position: relative;
   display: flex;
-  justify-content: end;
+  justify-content: end; /* Mantém a imagem alinhada à direita no desktop */
 }
-
 
 .price--image img {
   position: absolute;
   bottom: -6.688rem;
-  /*min-width: 73vw;*/
-  left: -8rem;
-  width: unset !important;
-  max-width: unset !important;
-  max-height: 670px;
+  right: -90px;
+  width: 110%; /* Mantém o tamanho aumentado */
+  height: auto;
+  max-width: none;
+  max-height: none;
 }
 
+/* No mobile, centraliza a imagem */
 @media (max-width: 700px) {
+  .price--image {
+    justify-content: flex-end; /* Move a imagem para a direita */
+    align-items: flex-end; /* Garante que ela encoste na borda inferior */
+    display: flex;
+    height: 100%; /* Mantém o espaço adequado */
+  }
+
   .price--image img {
-    min-width: auto;
-    bottom: -2rem;
-    min-width: 90vw;
-    left: unset;
-    max-width: 100% !important;
-    position: relative;
+    position: relative; /* Mantém a imagem dentro do fluxo normal */
+    bottom: -32px;
+    right: -19px;
+    width: 90vw; /* Mantém a imagem dentro da tela */
+    max-width: 100%;
+    height: auto;
   }
 }
 
-@media (min-width: 1537px) {
-  .price--image img {
-    /*min-width: 58vw;*/
-  }
-}
+
+
+
 /* FAQ */
 
 #faq {
@@ -1088,6 +1102,8 @@ p, a, strong, b {
     margin: 2em 0;
   }
 }
+
+
 
 /* cookieYes inicio */
 
