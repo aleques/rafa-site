@@ -46,7 +46,7 @@
   const newHref = `https://wa.me/32466459225?text=${baseText}${encodeURIComponent(ref)}`;
 
   function patchLinks(root) {
-    root.querySelectorAll('a[href*="wa.me"], a[href*="api.whatsapp.com"], a[href*="whatsapp.com"]').forEach(a => {
+    root.querySelectorAll('a[href*="wa.me"], a[href*="api.whatsapp.com"], a[href*="whatsapp.com"], a[href*="wa.link"]').forEach(a => {
       a.href = newHref;
     });
   }
