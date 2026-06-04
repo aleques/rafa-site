@@ -116,3 +116,5 @@ Campanha `[Hertz] [Leads] Laser – Tintim — WPP 2`:
 | Omnichannel | Chatwoot (self-hosted) |
 | Orquestração | n8n (Oracle Cloud Free Tier) |
 | Infra | Oracle Cloud Free Tier VPS |
+
+Teste
