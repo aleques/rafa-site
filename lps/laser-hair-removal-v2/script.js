@@ -45,8 +45,17 @@
   const baseText = "Bonjour%20!%20Je%20veux%20en%20savoir%20plus%20sur%20l%E2%80%99%C3%A9pilation%20laser.%20Code%20promo%20%3A%20";
   const newHref = `https://wa.me/32466459225?text=${baseText}${encodeURIComponent(ref)}`;
 
-  document.querySelectorAll('a[href*="wa.me"]').forEach(a => {
-    a.href = newHref;
+  function patchLinks(root) {
+    root.querySelectorAll('a[href*="wa.me"], a[href*="api.whatsapp.com"], a[href*="whatsapp.com"]').forEach(a => {
+      a.href = newHref;
+    });
+  }
+
+  patchLinks(document);
+
+  new MutationObserver(() => patchLinks(document)).observe(document.body, {
+    childList: true,
+    subtree: true,
   });
 })();
 
