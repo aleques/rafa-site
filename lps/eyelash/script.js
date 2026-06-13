@@ -38,6 +38,28 @@
 
 
 (() => {
+  const params = new URLSearchParams(window.location.search);
+  const ref = params.get('ref');
+  if (!ref) return;
+
+  const baseText = "Bonjour%20!%20Je%20veux%20en%20savoir%20plus%20sur%20les%20extensions%20de%20cils.%20Code%20promo%20%3A%20";
+  const newHref = `https://wa.me/32466459225?text=${baseText}${encodeURIComponent(ref)}`;
+
+  function patchLinks(root) {
+    root.querySelectorAll('a[href*="wa.me"], a[href*="api.whatsapp.com"], a[href*="whatsapp.com"], a[href*="wa.link"]').forEach(a => {
+      a.href = newHref;
+    });
+  }
+
+  patchLinks(document);
+
+  new MutationObserver(() => patchLinks(document)).observe(document.body, {
+    childList: true,
+    subtree: true,
+  });
+})();
+
+(() => {
   const slideBox = document.getElementById('slide-container');
   if (!slideBox) return null;
 
